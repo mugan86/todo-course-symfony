@@ -4,7 +4,7 @@ aml_user_homepage:
 
 aml_user_hello:
     path:     /hello/{name}
-    defaults: { _controller: AMLUserBundle:Default:helloName }
+    defaults: { _controller: AMLUserBundle:Default:helloName, name: 'Default NAME' }
 
 aml_user_index:
     path:     /user/index
