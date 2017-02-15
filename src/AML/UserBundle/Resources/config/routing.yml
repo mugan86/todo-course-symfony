@@ -13,3 +13,7 @@ aml_user_index:
 aml_user_index_select:
     path:     /user/index/{id}
     defaults: { _controller: AMLUserBundle:User:showUser }
+
+aml_user_articles:
+    path:     /user/articles/{page}
+    defaults: { _controller: AMLUserBundle:User:articles, page: 1 }
