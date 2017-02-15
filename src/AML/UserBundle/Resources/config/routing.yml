@@ -5,3 +5,11 @@ aml_user_homepage:
 aml_user_hello:
     path:     /hello/{name}
     defaults: { _controller: AMLUserBundle:Default:helloName }
+
+aml_user_index:
+    path:     /user/index
+    defaults: { _controller: AMLUserBundle:User:index }
+
+aml_user_index_select:
+    path:     /user/index/{id}
+    defaults: { _controller: AMLUserBundle:User:showUser }
