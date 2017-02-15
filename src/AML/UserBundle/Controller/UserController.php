@@ -20,4 +20,24 @@ class UserController extends Controller
     {
       return new Response('Este es mi artículo de la página ' . $page);
     }
+
+    public function addAction()
+    {
+      return new Response('Acción de añadir usuario');
+    }
+
+    public function viewAction($id)
+    {
+      return new Response('Acción de ver usuario con ID ' . $id);
+    }
+
+    public function editAction($id)
+    {
+      return new Response('Acción de editar usuario con ID ' . $id);
+    }
+
+    public function deleteAction($id)
+    {
+      return new Response('Acción de eliminar usuario con ID ' . $id);
+    }
 }

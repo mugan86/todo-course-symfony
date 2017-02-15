@@ -17,3 +17,19 @@ aml_user_index_select:
 aml_user_articles:
     path:     /user/articles/{page}
     defaults: { _controller: AMLUserBundle:User:articles, page: 1 }
+
+aml_user_add:
+    path:     /user/add
+    defaults: { _controller: AMLUserBundle:User:add }
+
+aml_user_edit:
+    path:     /user/edit/{id}
+    defaults: { _controller: AMLUserBundle:User:edit }
+
+aml_user_view:
+    path:     /user/view/{id}
+    defaults: { _controller: AMLUserBundle:User:view }
+
+aml_user_delete:
+    path:     /user/delete/{id}
+    defaults: { _controller: AMLUserBundle:User:delete }
