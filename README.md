@@ -28,6 +28,102 @@ A Symfony project created on February 15, 2017, 6:06 pm.
 
 * php app/console doctrine:generate:entity
 
+* Example with User Entity
+
+`Welcome to the Doctrine2 entity generator  
+
+
+
+This command helps you generate Doctrine2 entities.
+
+First, you need to give the entity name you want to generate.
+You must use the shortcut notation like AcmeBlogBundle:Post.
+
+The Entity shortcut name: AMLUserBundle:User
+
+Determine the format to use for the mapping information.
+
+Configuration format (yml, xml, php, or annotation) [annotation]:
+
+Instead of starting with a blank entity, you can add some fields now.
+Note that the primary key will be added automatically (named id).
+
+Available types: array, simple_array, json_array, object,
+boolean, integer, smallint, bigint, string, text, datetime, datetimetz,
+date, time, decimal, float, binary, blob, guid.
+
+New field name (press <return> to stop adding fields): username
+Field type [string]:
+Field length [255]: 50
+Is nullable [false]:
+Unique [false]:
+
+New field name (press <return> to stop adding fields): first_name
+Field type [string]:
+Field length [255]: 100
+Is nullable [false]:
+Unique [false]:
+
+New field name (press <return> to stop adding fields): last_name
+Field type [string]:
+Field length [255]: 100
+Is nullable [false]:
+Unique [false]:
+
+New field name (press <return> to stop adding fields): email
+Field type [string]:
+Field length [255]: 100
+Is nullable [false]:
+Unique [false]:
+
+New field name (press <return> to stop adding fields): password
+Field type [string]:
+Field length [255]: 255
+Is nullable [false]:
+Unique [false]:
+
+New field name (press <return> to stop adding fields): role
+Field type [string]:
+Field length [255]: 50
+Is nullable [false]:
+Unique [false]:
+
+New field name (press <return> to stop adding fields): is_active
+Field type [boolean]:
+Is nullable [false]:
+Unique [false]:
+
+New field name (press <return> to stop adding fields): created_at
+Field type [datetime]:
+Is nullable [false]:
+Unique [false]:
+
+New field name (press <return> to stop adding fields): updated_at
+Field type [datetime]:
+Is nullable [false]:
+Unique [false]:
+
+New field name (press <return> to stop adding fields):
+
+
+  Entity generation  
+
+
+  created ./src/AML/UserBundle/Entity/
+  created ./src/AML/UserBundle/Entity/User.php
+> Generating entity class src/AML/UserBundle/Entity/User.php: OK!
+> Generating repository class src/AML/UserBundle/Repository/UserRepository.php: OK!
+
+
+  Everything is OK! Now get to work :).  
+
+`
+
+6.- Create query in database after create entity
+* php app/console doctrine:schema:update --force
+* Updating database schema...
+* Database schema updated successfully! "1" queries were executed
+
 ### Errors and solutions
 
 1.- Warning: date_default_timezone_get() installing Symfony
