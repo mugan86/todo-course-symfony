@@ -9,7 +9,17 @@ class UserController extends Controller
 {
     public function indexAction()
     {
-        return new Response('Bienvenido a mi módulo de usuarios');
+        $em = $this->getDoctrine()->getManager();
+
+        $users = $em->getRepository('AMLUserBundle:User')->findAll();
+
+        $res = 'Lista de usuarios: <br />';
+
+        foreach ($users as $user) {
+          # code...
+          $res .= 'Usuario: ' . $user->getUsername() . ' - Email: ' . $user->getEmail() . '<br/>';
+        }
+        return new Response($res);
     }
     public function showUserAction($id)
     {
@@ -28,7 +38,17 @@ class UserController extends Controller
 
     public function viewAction($id)
     {
-      return new Response('Acción de ver usuario con ID ' . $id);
+      $repository = $this->getDoctrine()->getRepository('AMLUserBundle:User');
+
+      $user = $repository->find($id);
+
+      if (!$user)
+      {
+          return new Response(
+              'No user found for id '.$id
+          );
+      }
+      return new Response('Usuario ' . $user->getUsername());
     }
 
     public function editAction($id)
