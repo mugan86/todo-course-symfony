@@ -13,7 +13,15 @@ A Symfony project created on February 15, 2017, 6:06 pm.
 
 3.- How to view our app all routes:
 
-**php app/console debug:router** 
+**php app/console debug:router**
+
+4.- Configure and create database
+
+* https://symfony.com/doc/current/doctrine.html
+
+4.1.- First configure our database settings in app/config/parameter.yml file.
+4.2.- Create database php app/console doctrine:database:create
+4.3.- Add UTF-8
 
 ### Errors and solutions
 
@@ -26,3 +34,20 @@ misspelled the timezone identifier. We selected the timezone 'UTC' for now, but 
 date.timezone to select your timezone. in `
 
 http://stackoverflow.com/a/24251897
+
+2.- Connection Refused when I want create database
+
+`[Doctrine\DBAL\Exception\ConnectionException]                              
+ An exception occured in driver: SQLSTATE[HY000] [2002] Connection refused  
+
+
+
+ [Doctrine\DBAL\Driver\PDOException]        
+ SQLSTATE[HY000] [2002] Connection refused  
+
+
+
+ [PDOException]                             
+ SQLSTATE[HY000] [2002] Connection refused `
+
+ Solution: Check Database START!
