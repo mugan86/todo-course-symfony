@@ -17,7 +17,13 @@
       <td>{{ user.firstName }}</td>
       <td>{{ user.lastName }}</td>
       <td>{{ user.email }}</td>
-      <td>{{ user.role }}</td>
+      <td>
+        {% if user.role == 'ROLE_ADMIN' %}
+          <strong>Administrator</strong>
+        {% elseif user.role == 'ROLE_USER' %}
+          <strong>User</strong>
+        {% endif %}
+      </td>
       <td>{{ user.createdAt | date('d-m-Y H:i') }}</td>
       <td>{{ user.updatedAt | date('d-m-Y H:i') }}</td>
       <td>
