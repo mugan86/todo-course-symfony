@@ -24,6 +24,10 @@ A Symfony project created on February 15, 2017, 6:06 pm.
 4.3.- Receive message 'Created database `todo` for connection named default'
 4.4.- Change Collation to UTF8 -> If you using XAMPP (or WAMPP) go to localhost/phpmyadmin --> Databases --> Select create DB --> Operations --> Collation and change to UTF8
 
+5.- Create entity in our Bundle
+
+* php app/console doctrine:generate:entity
+
 ### Errors and solutions
 
 1.- Warning: date_default_timezone_get() installing Symfony
