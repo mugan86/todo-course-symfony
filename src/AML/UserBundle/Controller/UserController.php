@@ -19,7 +19,9 @@ class UserController extends Controller
           # code...
           $res .= 'Usuario: ' . $user->getUsername() . ' - Email: ' . $user->getEmail() . '<br/>';
         }
-        return new Response($res);
+        //return new Response($res);
+
+        return $this->render('AMLUserBundle:Default:list.html.twig', array('users' => $users));
     }
     public function showUserAction($id)
     {
