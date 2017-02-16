@@ -13,14 +13,14 @@ class UserController extends Controller
 
         $users = $em->getRepository('AMLUserBundle:User')->findAll();
 
-        $res = 'Lista de usuarios: <br />';
+        /*$res = 'Lista de usuarios: <br />';
 
         foreach ($users as $user) {
           # code...
           $res .= 'Usuario: ' . $user->getUsername() . ' - Email: ' . $user->getEmail() . '<br/>';
         }
         //return new Response($res);
-
+        */
         return $this->render('AMLUserBundle:Default:list.html.twig', array('users' => $users));
     }
     public function showUserAction($id)
