@@ -21,7 +21,8 @@ A Symfony project created on February 15, 2017, 6:06 pm.
 
 4.1.- First configure our database settings in app/config/parameter.yml file.
 4.2.- Create database php app/console doctrine:database:create
-4.3.- Add UTF-8
+4.3.- Receive message 'Created database `todo` for connection named default'
+4.4.- Change Collation to UTF8 -> If you using XAMPP (or WAMPP) go to localhost/phpmyadmin --> Databases --> Select create DB --> Operations --> Collation and change to UTF8
 
 ### Errors and solutions
 
