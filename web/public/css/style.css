@@ -3,3 +3,13 @@ h2
   font-size: 30px;
   color: #72a5a6;
 }
+
+.admin
+{
+  color: red;
+}
+
+.user
+{
+  color: green;
+}
