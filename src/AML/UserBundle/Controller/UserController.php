@@ -35,7 +35,8 @@ class UserController extends Controller
 
     public function addAction()
     {
-      return new Response('Acción de añadir usuario');
+      //return new Response('Acción de añadir usuario');
+      return $this->render('AMLUserBundle:Default:add.html.twig');
     }
 
     public function viewAction($id)
