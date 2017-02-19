@@ -47,11 +47,14 @@ class UserController extends Controller
 
       if (!$user)
       {
-          return new Response(
+          /*return new Response(
               'No user found for id '.$id
-          );
+          );*/
+
       }
-      return new Response('Usuario ' . $user->getUsername());
+
+      return $this->render('AMLUserBundle:Default:view.html.twig', array('user' => $user));
+      //return new Response('Usuario ' . $user->getUsername());
     }
 
     public function editAction($id)
