@@ -3,6 +3,7 @@
 namespace AML\UserBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use AML\UserBundle\Entity\User;
 use AML\UserBundle\Form\UserType;
@@ -52,6 +53,26 @@ class UserController extends Controller
       ));
 
       return $form;
+    }
+
+    public function createAction(Request $request)
+    {
+      $user = new User();
+      $form = $this->createCreateForm($user);
+      $form->handleRequest($request);
+
+      if ($form->isValid())
+      {
+        $user->setCreatedAt(new \DateTime(date('Y-m-d H:i:s')));
+        $user->setUpdatedAt(new \DateTime(date('Y-m-d H:i:s')));
+        $em = $this->getDoctrine()->getManager();
+        $em->persist($user);
+        $em->flush();
+
+        return $this->redirectToRoute('aml_user_index');
+      }
+
+      return $this->render('AMLUserBundle:Default:add.html.twig', array('form' => $form->createView()));
     }
 
     public function viewAction($id)
