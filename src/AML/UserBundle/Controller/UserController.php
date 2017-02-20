@@ -65,6 +65,17 @@ class UserController extends Controller
       {
         $user->setCreatedAt(new \DateTime(date('Y-m-d H:i:s')));
         $user->setUpdatedAt(new \DateTime(date('Y-m-d H:i:s')));
+
+        //Encrypt password
+        $password = $form->get('password')->getData();
+
+        $encoder = $this->container->get('security.password_encoder');
+
+        $encoded = $encoder->encodePassword($user, $password);
+
+        $user->setPassword($encoded);
+
+
         $em = $this->getDoctrine()->getManager();
         $em->persist($user);
         $em->flush();
