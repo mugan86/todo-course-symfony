@@ -22,6 +22,11 @@ aml_user_add:
     path:     /user/add
     defaults: { _controller: AMLUserBundle:User:add }
 
+aml_user_create:
+    path:     /user/create
+    defaults: { _controller: AMLUserBundle:User:create }
+    methods: POST
+
 aml_user_edit:
     path:     /user/edit/{id}
     defaults: { _controller: AMLUserBundle:User:edit }
