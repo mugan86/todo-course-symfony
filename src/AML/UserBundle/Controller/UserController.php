@@ -5,6 +5,7 @@ namespace AML\UserBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Response;
 use AML\UserBundle\Entity\User;
+use AML\UserBundle\Form\UserType;
 
 
 class UserController extends Controller
@@ -37,7 +38,6 @@ class UserController extends Controller
 
     public function addAction()
     {
-
       $user = new User();
       $form = $this->createCreateForm($user);
       //return new Response('Acción de añadir usuario');
@@ -48,7 +48,7 @@ class UserController extends Controller
     {
       $form = $this->createForm(new UserType(), $entity, array(
           'action' => $this->generateUrl('aml_user_create'),
-          'method'=> 'POST'
+          'method' => 'POST'
       ));
 
       return $form;
