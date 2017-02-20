@@ -3,6 +3,7 @@
 namespace AML\UserBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
  * User
@@ -10,7 +11,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Table(name="user")
  * @ORM\Entity(repositoryClass="AML\UserBundle\Repository\UserRepository")
  */
-class User
+class User implements UserInterface
 {
     /**
      * @var int
@@ -317,5 +318,20 @@ class User
     public function setUpdatedAtValue()
     {
         $this->updatedAt = new \DateTime();
+    }
+
+    public function getRoles()
+    {
+
+    }
+
+    public function getSalt()
+    {
+
+    }
+
+    public function eraseCredentials()
+    {
+
     }
 }
