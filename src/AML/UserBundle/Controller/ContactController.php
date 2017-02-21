@@ -23,7 +23,7 @@ class ContactController extends Controller
 
     private function createCreateForm(Contact $entity)
     {
-      $form = $this->createForm(new ContactType(), $entity, array(
+      $form = $this->createForm(ContactType::class, $entity, array(
           'action' => $this->generateUrl('aml_contact_create'),
           'method' => 'POST'
       ));
