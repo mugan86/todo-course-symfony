@@ -27,6 +27,7 @@ A Symfony project created on February 15, 2017, 6:06 pm.
 5.- Create entity in our Bundle
 
 * php app/console doctrine:generate:entity
+* Configuration format (yml, xml, php, or annotation) [annotation]: annotation
 
 
 6.- Create query in database after create entity
@@ -51,7 +52,12 @@ A Symfony project created on February 15, 2017, 6:06 pm.
 * Add 'use AML\UserBundle\Form\UserType;' to use UseType file to create userform.
 * Define private 'createCreateForm' function and add POST method
 * Add 'aml_user_create' route to use in form create and send info. Important to add 'methods: POST'
-
+* Create form layout in 'add.html.twig' http://symfony.com/doc/2.8/forms.html
+* Define createAction in UserController.php to send form data.
+* Define updateAt and createdAt with DateTime()
+* Encode password in user entity (define in security.yml - app/config) (Line 25)
+* Add in header of Entity/User and User class implements UserInterface;
+* Add override methods and encode password in UserController createAction function (Line 70)
 
 
 ### Errors and solutions
