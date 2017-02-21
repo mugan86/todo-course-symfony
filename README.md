@@ -41,7 +41,18 @@ A Symfony project created on February 15, 2017, 6:06 pm.
 8.- Steps to create form
 
 * http://symfony.com/doc/2.8/forms.html
-* 
+* Create new url in src/AML/UserBundle/Resources/config/routing.yml---> 'aml_user_add' (Define path and select controller)
+* Add url in 'menu.html.twig' to use and redirect add form (aml_user_add)
+* Add in AML/UserBundle/Controller/UserController.php User entity object file---> use AML\UserBundle\Entity\User;
+* Define Add Action with start User() object and return add.html.twig template--> addAction (UserController.php / Line 40)
+* Create form with php app/console doctrine:generate:form AMLUserBundle:User (object to create UserType.php)
+* Define 'buildForm' (UserType / Line 14) with remove 'updateAt' and 'createdAt'
+* (http://symfony.com/doc/2.8/reference/forms/types.html)
+* Add 'use AML\UserBundle\Form\UserType;' to use UseType file to create userform.
+* Define private 'createCreateForm' function and add POST method
+* Add 'aml_user_create' route to use in form create and send info. Important to add 'methods: POST'
+
+
 
 ### Errors and solutions
 
