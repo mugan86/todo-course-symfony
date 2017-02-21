@@ -47,7 +47,7 @@ class UserController extends Controller
 
     private function createCreateForm(User $entity)
     {
-      $form = $this->createForm(new UserType(), $entity, array(
+      $form = $this->createForm(UserType::class, $entity, array(
           'action' => $this->generateUrl('aml_user_create'),
           'method' => 'POST'
       ));
