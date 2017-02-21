@@ -18,6 +18,15 @@ aml_user_articles:
     path:     /user/articles/{page}
     defaults: { _controller: AMLUserBundle:User:articles, page: 1 }
 
+aml_contact_add:
+        path:     /contact/add
+        defaults: { _controller: AMLUserBundle:Contact:add }
+
+aml_user_create:
+    path:     /contact/create
+    defaults: { _controller: AMLUserBundle:Contact:create }
+    methods: POST
+
 aml_user_add:
     path:     /user/add
     defaults: { _controller: AMLUserBundle:User:add }
