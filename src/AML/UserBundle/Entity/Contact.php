@@ -46,7 +46,7 @@ class Contact
     /**
      * Get id
      *
-     * @return integer 
+     * @return integer
      */
     public function getId()
     {
@@ -69,7 +69,7 @@ class Contact
     /**
      * Get datetime
      *
-     * @return \DateTime 
+     * @return \DateTime
      */
     public function getDatetime()
     {
@@ -92,7 +92,7 @@ class Contact
     /**
      * Get email
      *
-     * @return string 
+     * @return string
      */
     public function getEmail()
     {
@@ -115,7 +115,7 @@ class Contact
     /**
      * Get message
      *
-     * @return string 
+     * @return string
      */
     public function getMessage()
     {

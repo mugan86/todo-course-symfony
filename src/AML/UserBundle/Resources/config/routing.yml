@@ -22,7 +22,7 @@ aml_contact_add:
         path:     /contact/add
         defaults: { _controller: AMLUserBundle:Contact:add }
 
-aml_user_create:
+aml_contact_create:
     path:     /contact/create
     defaults: { _controller: AMLUserBundle:Contact:create }
     methods: POST
