@@ -88,3 +88,11 @@ http://stackoverflow.com/a/24251897
  SQLSTATE[HY000] [2002] Connection refused `
 
  Solution: Check Database START!
+
+ 3.- php app/console doctrine:schema:update --force --dump-sql --ansi
+
+
+  [Doctrine\DBAL\DBALException]                                                                    
+  Unknown database type enum requested, Doctrine\DBAL\Platforms\MySqlPlatform may not support it.  
+
+http://stackoverflow.com/a/12925885/3655781
