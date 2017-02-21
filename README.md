@@ -38,6 +38,11 @@ A Symfony project created on February 15, 2017, 6:06 pm.
 
 * http://stackoverflow.com/a/10382504
 
+8.- Steps to create form
+
+* http://symfony.com/doc/2.8/forms.html
+* 
+
 ### Errors and solutions
 
 1.- Warning: date_default_timezone_get() installing Symfony
