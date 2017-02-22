@@ -6,6 +6,10 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\ButtonType;
+use Symfony\Component\Form\Extension\Core\Type\EmailType;
+use Symfony\Component\Form\Extension\Core\Type\PasswordType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 
 class UserType extends AbstractType
 {
@@ -18,11 +22,11 @@ class UserType extends AbstractType
             ->add('username')
             ->add('firstName')
             ->add('lastName')
-            ->add('email', 'email')
-            ->add('password', 'password')
-            ->add('role', 'choice', array('choices' => array('ROLE_ADMIN' => 'Administrator',
+            ->add('email', EmailType::class)
+            ->add('password', PasswordType::class)
+            ->add('role', ChoiceType::class, array('choices' => array('ROLE_ADMIN' => 'Administrator',
                 'ROLE_USER' => 'User'), 'placeholder' => 'Select a role'))
-            ->add('isActive', 'checkbox')
+            ->add('isActive', CheckboxType::class)
             ->add('save', ButtonType::class, array(
                 'attr' => array('class' => 'save'),
               ))
