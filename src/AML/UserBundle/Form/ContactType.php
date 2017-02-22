@@ -5,7 +5,6 @@ namespace AML\UserBundle\Form;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
-use Symfony\Component\Form\Extension\Core\Type\ButtonType;
 
 class ContactType extends AbstractType
 {
@@ -14,7 +13,7 @@ class ContactType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('email')->add('message')->add('save', ButtonType::class, array(
+        $builder->add('email')->add('message')->add('save', 'submit', array(
             'attr' => array('class' => 'save'),
           ));
         //->add('save', 'submit', array('label' => 'Send comment'));

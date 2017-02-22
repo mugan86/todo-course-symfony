@@ -27,7 +27,7 @@ class UserType extends AbstractType
             ->add('role', ChoiceType::class, array('choices' => array('ROLE_ADMIN' => 'Administrator',
                 'ROLE_USER' => 'User'), 'placeholder' => 'Select a role'))
             ->add('isActive', CheckboxType::class)
-            ->add('save', ButtonType::class, array(
+            ->add('save', 'submit', array(
                 'attr' => array('class' => 'save'),
               ))
             //->add('save', 'submit', array('label' => 'Save user'))
