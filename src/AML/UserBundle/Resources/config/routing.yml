@@ -2,6 +2,14 @@ aml_user_homepage:
     path:     /
     defaults: { _controller: AMLUserBundle:Default:index, name: 'Default NAME' }
 
+aml_blank_page:
+    path:     /blank
+    defaults: { _controller: AMLUserBundle:Default:blank}
+
+aml_login_page:
+    path:     /login
+    defaults: { _controller: AMLUserBundle:Default:login}
+
 aml_user_hello:
     path:     /hello/{name}
     defaults: { _controller: AMLUserBundle:Default:helloName, name: 'Default NAME' }
