@@ -8,7 +8,8 @@ class DefaultController extends Controller
 {
     public function indexAction()
     {
-        return $this->render('AMLUserBundle:Default:index.html.twig', array('name' => 'AMLUserBundle'));
+      //, array('name' => 'AMLUserBundle')
+        return $this->render('AMLUserBundle:Default:test.html.twig');
     }
     public function helloNameAction($name)
     {
