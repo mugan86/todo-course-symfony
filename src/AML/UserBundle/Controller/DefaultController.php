@@ -9,10 +9,22 @@ class DefaultController extends Controller
     public function indexAction()
     {
       //, array('name' => 'AMLUserBundle')
-        return $this->render('AMLUserBundle:Default:admin.html.twig');
+        return $this->render('AMLUserBundle:Admin:index.html.twig');
     }
     public function helloNameAction($name)
     {
         return $this->render('AMLUserBundle:Default:index.html.twig', array('name' => $name));
+    }
+
+    public function blankAction()
+    {
+      //, array('name' => 'AMLUserBundle')
+        return $this->render('AMLUserBundle:Admin:blank.html.twig');
+    }
+
+    public function loginAction()
+    {
+      //, array('name' => 'AMLUserBundle')
+        return $this->render('AMLUserBundle:Admin:login.html.twig');
     }
 }
