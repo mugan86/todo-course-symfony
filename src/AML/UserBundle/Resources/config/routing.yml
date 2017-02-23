@@ -1,6 +1,6 @@
 aml_user_homepage:
     path:     /
-    defaults: { _controller: AMLUserBundle:Default:index }
+    defaults: { _controller: AMLUserBundle:Default:index, name: 'Default NAME' }
 
 aml_user_hello:
     path:     /hello/{name}
