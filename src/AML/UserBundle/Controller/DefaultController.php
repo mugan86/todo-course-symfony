@@ -45,4 +45,33 @@ class DefaultController extends Controller
       //, array('name' => 'AMLUserBundle')
         return $this->render('AMLUserBundle:Admin:tables.html.twig');
     }
+    public function panelsAction()
+    {
+      //, array('name' => 'AMLUserBundle')
+        return $this->render('AMLUserBundle:Admin:panels.html.twig');
+    }
+
+    public function notificationsAction()
+    {
+      //, array('name' => 'AMLUserBundle')
+        return $this->render('AMLUserBundle:Admin:notifications.html.twig');
+    }
+
+    public function typographysAction()
+    {
+      //, array('name' => 'AMLUserBundle')
+        return $this->render('AMLUserBundle:Admin:typographys.html.twig');
+    }
+
+    public function iconsAction()
+    {
+      //, array('name' => 'AMLUserBundle')
+        return $this->render('AMLUserBundle:Admin:icons.html.twig');
+    }
+
+    public function gridsAction()
+    {
+      //, array('name' => 'AMLUserBundle')
+        return $this->render('AMLUserBundle:Admin:grids.html.twig');
+    }
 }
