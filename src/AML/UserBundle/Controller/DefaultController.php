@@ -27,4 +27,10 @@ class DefaultController extends Controller
       //, array('name' => 'AMLUserBundle')
         return $this->render('AMLUserBundle:Admin:login.html.twig');
     }
+
+    public function buttonsAction()
+    {
+      //, array('name' => 'AMLUserBundle')
+        return $this->render('AMLUserBundle:Admin:buttons.html.twig');
+    }
 }
