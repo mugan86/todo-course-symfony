@@ -22,6 +22,26 @@ aml_tables_page:
     path:     /tables
     defaults: { _controller: AMLUserBundle:Default:tables}
 
+aml_panels_page:
+    path:     /panels
+    defaults: { _controller: AMLUserBundle:Default:panels}
+
+aml_notifications_page:
+    path:     /notifications
+    defaults: { _controller: AMLUserBundle:Default:notifications}
+
+aml_typography_page:
+    path:     /typographys
+    defaults: { _controller: AMLUserBundle:Default:typographys}
+
+aml_icons_page:
+    path:     /icons
+    defaults: { _controller: AMLUserBundle:Default:icons}
+
+aml_grid_page:
+    path:     /grids
+    defaults: { _controller: AMLUserBundle:Default:grids}
+
 aml_user_hello:
     path:     /hello/{name}
     defaults: { _controller: AMLUserBundle:Default:helloName, name: 'Default NAME' }
