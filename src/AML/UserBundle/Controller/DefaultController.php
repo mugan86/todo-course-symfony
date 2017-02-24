@@ -39,4 +39,10 @@ class DefaultController extends Controller
       //, array('name' => 'AMLUserBundle')
         return $this->render('AMLUserBundle:Admin:forms.html.twig');
     }
+
+    public function tablesAction()
+    {
+      //, array('name' => 'AMLUserBundle')
+        return $this->render('AMLUserBundle:Admin:tables.html.twig');
+    }
 }

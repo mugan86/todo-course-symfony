@@ -18,6 +18,10 @@ aml_forms_page:
     path:     /forms
     defaults: { _controller: AMLUserBundle:Default:forms}
 
+aml_tables_page:
+    path:     /tables
+    defaults: { _controller: AMLUserBundle:Default:tables}
+
 aml_user_hello:
     path:     /hello/{name}
     defaults: { _controller: AMLUserBundle:Default:helloName, name: 'Default NAME' }
