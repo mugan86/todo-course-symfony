@@ -10,6 +10,10 @@ aml_login_page:
     path:     /login
     defaults: { _controller: AMLUserBundle:Default:login}
 
+aml_button_page:
+    path:     /buttons
+    defaults: { _controller: AMLUserBundle:Default:buttons}
+
 aml_user_hello:
     path:     /hello/{name}
     defaults: { _controller: AMLUserBundle:Default:helloName, name: 'Default NAME' }
