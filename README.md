@@ -11,35 +11,44 @@ A Symfony project created on February 15, 2017, 6:06 pm.
 
 * Clone repository and execute 'sudo composer install' (First asign read/write permissions)
 
-3.- How to view our app all routes:
+3.- Create new bundle (with namespace):
+
+* 3.1.- php app/console generate:bundle --namespace=AML/ServiraceBundle
+* 3.2.- INTRO [NO]
+* 3.3.- Bundle Name.
+* 3.4.- Create src directory?
+* 3.5.- INTRO[EMPTY]
+* 3.6.- Format: yml
+
+4.- How to view our app all routes:
 
 **php app/console debug:router**
 
-4.- Configure and create database
+5.- Configure and create database
 
 * https://symfony.com/doc/current/doctrine.html
 
-* 4.1.- First configure our database settings in app/config/parameter.yml file.
-* 4.2.- Create database php app/console doctrine:database:create
-* 4.3.- Receive message 'Created database `todo` for connection named default'
-* 4.4.- Change Collation to UTF8 -> If you using XAMPP (or WAMPP) go to localhost/phpmyadmin --> Databases --> Select create DB --> Operations --> Collation and change to UTF8
+* 5.1.- First configure our database settings in app/config/parameter.yml file.
+* 5.2.- Create database php app/console doctrine:database:create
+* 5.3.- Receive message 'Created database `todo` for connection named default'
+* 5.4.- Change Collation to UTF8 -> If you using XAMPP (or WAMPP) go to localhost/phpmyadmin --> Databases --> Select create DB --> Operations --> Collation and change to UTF8
 
-5.- Create entity in our Bundle
+6.- Create entity in our Bundle
 
 * php app/console doctrine:generate:entity
 * Configuration format (yml, xml, php, or annotation) [annotation]: annotation
 
 
-6.- Create query in database after create entity
+7.- Create query in database after create entity
 * php app/console doctrine:schema:update --force
 * Updating database schema...
 * Database schema updated successfully! "1" queries were executed
 
-7.- Urls with parameters in twig template
+8.- Urls with parameters in twig template
 
 * http://stackoverflow.com/a/10382504
 
-8.- Steps to create form
+9.- Steps to create form
 
 * http://symfony.com/doc/2.8/forms.html
 * Create new url in src/AML/UserBundle/Resources/config/routing.yml---> 'aml_user_add' (Define path and select controller)
