@@ -36,6 +36,7 @@ A Symfony project created on February 15, 2017, 6:06 pm.
 6.- Create entity in our Bundle
 
 * php app/console doctrine:generate:entity
+* Add new entity inside bundle---> Bundle:Entity (For example: AMLServiraceBundle:Race)
 * Configuration format (yml, xml, php, or annotation) [annotation]: annotation
 
 
