@@ -1,0 +1,4 @@
+services:
+#    aml_servirace.example:
+#        class: AML\ServiraceBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

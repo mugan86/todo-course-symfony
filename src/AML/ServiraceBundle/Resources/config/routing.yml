@@ -1,0 +1,15 @@
+aml_servirace_homepage:
+    path:     /admin
+    defaults: { _controller: AMLServiraceBundle:Default:index }
+
+aml_servirace_races_list:
+    path:     /admin/races/list
+    defaults: { _controller: AMLServiraceBundle:Default:races }
+
+aml_servirace_towns:
+    path:     /admin/towns
+    defaults: { _controller: AMLServiraceBundle:Default:towns }
+
+aml_servirace_services:
+    path:     /admin/services
+    defaults: { _controller: AMLServiraceBundle:Default:services }
