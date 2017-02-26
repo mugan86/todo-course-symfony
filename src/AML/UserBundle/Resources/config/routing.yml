@@ -87,3 +87,10 @@ aml_user_view:
 aml_user_delete:
     path:     /user/delete/{id}
     defaults: { _controller: AMLUserBundle:User:delete }
+
+aml_user_redirect_add:
+    path: /user/create
+    defaults:
+      _controller: AMLUserBundle:User:add
+      path: /user/add
+      permanent: true
