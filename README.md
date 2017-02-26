@@ -73,7 +73,18 @@ A Symfony project created on February 15, 2017, 6:06 pm.
 
 * Add 'use Symfony\Component\Validator\Constraints as Assert;' in Entity to use to create form (basic validates with types in: https://symfony.com/doc/2.8/validation.html)
 * Add 'use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;'
-* Configure in Entity header with want fields to validate UniqueEntity
+* Configure in Entity header with want fields to validate UniqueEntity.
+
+11.- Redirect Route after error in form (validation ERROR)
+
+* In Bundle routingyml file, add:
+
+aml_user_redirect_add:
+  path: /user/createForm
+  defaults:
+    _controller: AMLUserBundle:User:add
+    path: /user/add
+    permanent: true
 
 
 ### Errors and solutions
