@@ -8,7 +8,7 @@
               <h1 class="page-header">Add new user</h1>
           </div>
           <!-- /.col-lg-12 -->
-          {{ form_start(form, { 'attr' : {'role': 'form'} })}}
+          {{ form_start(form, { 'attr' : {'novalidate': 'novalidate', 'role': 'form'} })}}
           <div class="form-group">
             {{ form_label(form.username) }}
             {{ form_widget(form.username, { 'attr': {'class' : 'form-control', 'placeholder' : 'Your username'} }) }}
