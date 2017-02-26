@@ -71,6 +71,8 @@ class User implements UserInterface
      * @var string
      *
      * @ORM\Column(name="role", type="string", length=50)
+     * @Assert\NotBlank()
+     * @Assert\Choice({"ROLE_ADMIN", "ROLE_USER"}, message="Choose a user type please")
      */
     private $role;
 
