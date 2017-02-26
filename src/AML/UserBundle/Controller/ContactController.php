@@ -48,6 +48,6 @@ class ContactController extends Controller
         return $this->redirectToRoute('aml_user_index');
       }
 
-      return $this->render('AMLUserBundle:Default:add.html.twig', array('form' => $form->createView()));
+      return $this->render('AMLUserBundle:Contact:add.html.twig', array('form' => $form->createView()));
     }
 }
