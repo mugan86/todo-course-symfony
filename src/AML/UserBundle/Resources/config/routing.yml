@@ -94,3 +94,10 @@ aml_user_redirect_add:
       _controller: AMLUserBundle:User:add
       path: /user/add
       permanent: true
+
+aml_contact_redirect_add:
+    path: /contact/create
+    defaults:
+      _controller: AMLUserBundle:Contact:add
+      path: /contact/add
+      permanent: true
