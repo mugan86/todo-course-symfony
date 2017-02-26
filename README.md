@@ -69,10 +69,11 @@ A Symfony project created on February 15, 2017, 6:06 pm.
 * Add in header of Entity/User and User class implements UserInterface;
 * Add override methods and encode password in UserController createAction function (Line 70)
 
-10.- Validate forms (https://symfony.com/doc/2.8/validation.html)
+10.- Validate forms
 
-* Add 'use Symfony\Component\Validator\Constraints as Assert;' in Entity to use to create form.
-*
+* Add 'use Symfony\Component\Validator\Constraints as Assert;' in Entity to use to create form (basic validates with types in: https://symfony.com/doc/2.8/validation.html)
+* Add 'use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;'
+* Configure in Entity header with want fields to validate UniqueEntity
 
 
 ### Errors and solutions
