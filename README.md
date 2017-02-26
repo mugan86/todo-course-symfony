@@ -69,6 +69,11 @@ A Symfony project created on February 15, 2017, 6:06 pm.
 * Add in header of Entity/User and User class implements UserInterface;
 * Add override methods and encode password in UserController createAction function (Line 70)
 
+10.- Validate forms (https://symfony.com/doc/2.8/validation.html)
+
+* Add 'use Symfony\Component\Validator\Constraints as Assert;' in Entity to use to create form.
+*
+
 
 ### Errors and solutions
 
